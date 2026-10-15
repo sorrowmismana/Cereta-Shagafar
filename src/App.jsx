@@ -1,12 +1,15 @@
 import NavBar from "./NavBar";
 import ItemHero from "./ItemHero";
+import ItemCard from "./ItemCard";
+import ArticleCard from "./articleCard";
+
 function App() {
   return(
     <>
-      <NavBar/>
       <main className='wrapper'>
-        <ItemHero/>
+        <ArticleCard/>
       </main>
+
     </>
   );
  
