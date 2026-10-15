@@ -1,4 +1,5 @@
 import image from "./assets/items/Shagafarian-lohtikhar.png"
+import religion_icon from "./assets/icon/religion_icon.svg"
 
 function ArticleCard(){
     return(
@@ -6,8 +7,16 @@ function ArticleCard(){
             <div className="image">
                 <img src={image}/>
             </div>
-            <div className="articleIcon">a</div>
-            <div className="title">a</div>
+            <div className="articleIcon">
+                <div src={religion_icon} className="itemCardIcon">
+                </div>
+            </div>
+            <div className="title">
+                <div className="articleCategory"> item</div>
+                <div className="articleTitle"> 
+                    <h2>TITLE</h2>
+                </div>
+            </div>
         </div>
     )
 }

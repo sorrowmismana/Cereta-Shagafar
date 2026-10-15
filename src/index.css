@@ -272,9 +272,9 @@ body{
 }
 
 .itemCardIcon{
-    width: 65%;
+    width: 60%;
     aspect-ratio: 1;
-    background-color: #869BB2;
+    background-color: #A2B2C3;
     transition: background-color 0.4s ease, translate 0.4s ease;
     -webkit-mask: url("./assets/icon/religion_icon.svg")0 0 / 100% 100% no-repeat;
             mask: url("./assets/icon/religion_icon.svg")0 0 / 100% 100% no-repeat;
@@ -372,16 +372,17 @@ body{
     "image image"
     "articleIcon title";
     grid-template-columns: 1fr 3fr;
-    gap: 0.4vw;
-    background-color: #C7CFD8;
+    gap: 0.7vw;
+
 }   
 
 .articleCard div.image{
     grid-area: image;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/11;
 }
 
 .articleCard div.image img{
+    object-fit: cover;
     grid-area: image;
     width: 100%;
     height: 100%;
@@ -390,10 +391,58 @@ body{
 .articleCard div.articleIcon{
     grid-area: articleIcon;
     align-self: stretch;
-    background-color: #FCA311;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.articleCard .articleIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1.1547;
+    min-width: 0;
+    background: #C7CFD8;
+     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 .articleCard div.title{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     grid-area: title;
-    background-color: aqua;
+    background-color: #263341;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
+
+.articleCard .articleTitle{
+    margin: 0;
+    padding: 0;
+    flex: 3;
+    color: #C7CFD8;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 2vw;
+    text-transform: uppercase;
+    top: 0;
+}
+
+
+.articleTitle, .articleCategory{
+    text-transform: capitalize;
+}
+
+
+.articleCard .articleCategory{
+    flex: 1;
+    color: #A2B2C3;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1vw;
+}
+
+
