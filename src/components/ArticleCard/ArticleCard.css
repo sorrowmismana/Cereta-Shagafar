@@ -2,7 +2,7 @@
 
 .articleCard{
     grid-template-rows: auto auto;
-    width: 20vw;
+    width: 100%;
     display: grid;
     grid-template-areas: 
     "image image"

@@ -9,6 +9,7 @@ function App() {
         <Routes>
           <Route element={<Layout/>}>
             <Route path="/" element={<Explore/>}/>
+            <Route path="/factions" element={<Faction/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

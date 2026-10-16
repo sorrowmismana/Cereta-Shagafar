@@ -23,13 +23,16 @@
 .navLeft, .navRight{
     display: flex;
     gap: 4vw;
+
+    
 }
 
-.navLeft, .navRight a{
+.navLeft a, .navRight a{
     font-family: "Roboto Mono", monospace;
     font-weight: 700;
     font-size: 1.2vw;
     color: #FCA311;
+    text-decoration: none;
 }
 
 .icon{

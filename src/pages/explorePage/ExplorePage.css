@@ -1,8 +1,39 @@
-.ExplorePage{
+.explorePage{
     margin-top: 8vw;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 6vw;
+}
+
+.chevron{
+    width: 4vw;
+    aspect-ratio: 1 / 0.4387;
+    background: #A2B2C3;
+    clip-path: polygon(
+        0 0,
+        50% 65.8%,      /* tip of the outer edge: 0.2887 / 0.4387 */
+        100% 0,
+        100% 34.2%,     /* thickness: 0.15 / 0.4387 */
+        50% 100%,       /* tip of the inner edge */
+        0 34.2%
+    );
+}
+
+.pageTitle{
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "JetBrains Mono", sans-serif;
+    font-weight: 900;
+    font-size: 14vw;
+    color: #FCA311;
+    text-align: left;
+    width: 100%;
+    margin-left: -0.083em; 
+}
+
+.cardGrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     gap: 2vw;
-    justify-content: center;
-    flex-direction: row;
+    
 }
