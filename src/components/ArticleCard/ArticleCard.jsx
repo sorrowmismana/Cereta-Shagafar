@@ -1,6 +1,6 @@
 import image from "./assets/items/Shagafarian-lohtikhar.png"
 import religion_icon from "./assets/icon/religion_icon.svg"
-
+import "./ArticleCard.css"
 function ArticleCard(){
     return(
         <div className="articleCard">

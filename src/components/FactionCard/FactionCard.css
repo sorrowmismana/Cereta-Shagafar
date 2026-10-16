@@ -1,0 +1,187 @@
+
+.itemCard{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 25vw;           
+    height: 42vw;
+    gap:1vw;
+    --bar: 4.2vw;
+    --line: 0.3vw;
+    cursor:pointer;
+}
+
+.itemCardTop{
+    position: relative;
+    width:100%;
+    aspect-ratio: 576.5/792.56;
+    --gapY: 0.2%;
+    --gapX: 0.7%
+}
+
+.itemCardTop::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.7vw;
+    background-color: #263341;
+    z-index: 3;
+}
+
+.itemCardTop::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.7vw;
+    background-color: #FCA311;       
+    z-index: 4;                     
+    clip-path: inset(0 50% 0 50%);   
+    transition: clip-path 0.5s ease;
+}
+
+.itemCard:hover .itemCardTop::before{
+    clip-path: inset(0 0 0 0);       
+}
+.itemCardFrame, .itemCardImage{
+    position: absolute;
+    inset: 0;
+}
+
+.itemCardImage{
+    position: absolute;
+    inset: var(--gapY) var(--gapX);
+    z-index: 2;
+    overflow: hidden;
+    -webkit-mask: url("./assets/borders/border_card_top_mask_1.svg") 0 0 / 100% 100% no-repeat;;
+            mask: url("./assets/borders/border_card_top_mask_1.svg") 0 0 / 100% 100% no-repeat;;
+    
+}   
+
+.itemCardImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.itemCard:hover .itemCardImage img{
+    transform: scale(1.2);
+}
+
+.itemCardImage::after{
+    content:"";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #D9D9D900 0%,#031523 100%);
+    pointer-events: none;
+}
+
+.itemCardFrame{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #193B62;
+    transition: background-color 0.4s ease;
+    -webkit-mask: url("./assets/borders/border_card_top_1.svg") 0 0 / 100% 100% no-repeat;
+            mask: url("./assets/borders/border_card_top_1.svg") 0 0 / 100% 100% no-repeat;
+}
+
+.itemCard:hover .itemCardFrame{
+    background-color: #840032;
+}
+
+.itemCardIcon{
+    width: 60%;
+    aspect-ratio: 1;
+    background-color: #A2B2C3;
+    transition: background-color 0.4s ease, translate 0.4s ease;
+    -webkit-mask: url("./assets/icon/religion_icon.svg")0 0 / 100% 100% no-repeat;
+            mask: url("./assets/icon/religion_icon.svg")0 0 / 100% 100% no-repeat;
+}
+
+.itemCard:hover .itemCardIcon{
+    background-color: #840032;
+
+}
+
+.itemCardBot{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    width:100%;
+    height:6%;
+    flex:0 0 var(--bar);
+}
+
+.squareLeft, .squareRight{
+    position: absolute;
+    top: 0;
+    width: var(--bar);
+    height: 100%;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    background: #263341;
+    transition: width 0.4s ease,  color 0.4s ease;
+}
+
+.squareLeft{
+    left: 0;
+}
+.squareRight{
+    right: 0;
+}
+
+
+.itemCardName{
+    position: relative;          
+    z-index: 3;
+    flex: 1;
+    align-self: stretch;         
+    margin: 0 calc(var(--bar) + 1vw);
+    display: flex;
+    align-items: center;         
+    justify-content: center;     
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 1.5vw;
+    color: #8A98A7;
+    transition: color 0.6s ease, font-size 0.5s ease;
+}
+
+.itemCard:hover .itemCardName{
+    color: #FCA311;
+    font-size: 1.7vw
+}
+
+.itemCard:hover .squareLeft, .itemCard:hover .squareRight{
+    width: 50%;
+    background: #840032;
+}
+
+.symbolIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    width: 7vw;
+    aspect-ratio: 1 / 1.1547;
+    background: #C7CFD8;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: 3;
+    transition: translate 0.4s ease, background 0.6s ease;
+}
+
+.itemCard:hover .symbolIcon{
+    translate: 0 -2vw;
+    background: #FCA311;
+}

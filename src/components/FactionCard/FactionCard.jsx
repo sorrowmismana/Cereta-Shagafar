@@ -1,6 +1,7 @@
 import border from "./assets/borders/border_card_top_1.svg";
 import image from "./assets/items/Shagafarian-lohtikhar.png"
 import religion_icon from "./assets/icon/religion_icon.svg"
+import "./FactionCard.css";
 
 function ItemCard(){
     return(

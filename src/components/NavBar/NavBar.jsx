@@ -1,5 +1,5 @@
-import emblem from "./assets/icon/shagafar_emblem.svg"
-
+import emblem from "../../assets/icon/shagafar_emblem.svg";
+import "./NavBar.css";
 
 function NavBar(){
     return(

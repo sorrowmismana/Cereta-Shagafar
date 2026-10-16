@@ -1,15 +1,16 @@
-import NavBar from "./NavBar";
-import ItemHero from "./ItemHero";
-import ItemCard from "./ItemCard";
-import ArticleCard from "./articleCard";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./layouts/layout";
+import Faction from "./pages/factionPage/FactionPage"
 function App() {
   return(
     <>
-      <main className='wrapper'>
-        <ArticleCard/>
-      </main>
-
+    <BrowserRouter>
+        <Routes>
+          <Route element={<Layout/>}>
+            <Route path="/" element={<Faction/>}/>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
  
