@@ -5,9 +5,14 @@ import FactionCard from "../../components/FactionCard/FactionCard"
 function FactionPage(){
     return(
         <div className="factionPage">
-            {factions.map(faction => (
+            <div className="factionPageTitle">
+                <p>FACTIONS</p>
+            </div>
+            <div className="FactionGrid">
+                {factions.map(faction => (
                 <FactionCard key={faction.id} {...faction}/>
             ))}
+            </div>
         </div>
     );
 }

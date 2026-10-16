@@ -5,7 +5,7 @@ import ArticleCard from "../../components/ArticleCard/ArticleCard"
 function ExplorePage(){
     return(
         <div className="explorePage">
-            <div className="pageTitle">
+            <div className="explorePageTitle">
                 <p>EXPLORE</p>
             </div>
             <div className="cardGrid">

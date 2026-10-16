@@ -1,7 +1,7 @@
 import emblem from "../../assets/icon/shagafar_emblem.svg";
 import "./NavBar.css";
 import { navLink } from "../../data/NavLinks";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function NavBar(){
     const left = navLink.filter(i => i.side === "left");
@@ -9,16 +9,14 @@ function NavBar(){
     return(
         <div className="nav">
             <div className="navLeft">
-                {left.map(i=> (<Link key={i.to} to={i.to}>{i.label}</Link>))}
+                {left.map(i=> (<NavLink key={i.to} to={i.to}>{i.label}</NavLink>))}
             </div>
             <div className="icon">
                 <img src={emblem}></img>
             </div>
             <div className="navRight">
-                {right.map(i =>(<Link key={i.to} to={i.to}>{i.label}</Link>))}
+                {right.map(i =>(<NavLink key={i.to} to={i.to}>{i.label}</NavLink>))}
             </div>
-                
-            <div className="navBottom"></div>
         </div>
     );
 }

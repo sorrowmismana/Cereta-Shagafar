@@ -10,6 +10,7 @@ function App() {
           <Route element={<Layout/>}>
             <Route path="/" element={<Explore/>}/>
             <Route path="/factions" element={<Faction/>}/>
+            <Route path="/explore" element={<Explore/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

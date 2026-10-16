@@ -1,51 +1,77 @@
 /* NAV BAR  _______________________________________________________________________________________________________*/
 .nav{
+    font-size: 1.2vw;
     top: 0;
     width: 100%;
-    height: 3.8vw;
+    height: 2.82em;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     grid-template-rows: 2.865vw 1.042vw;
-    padding: 0.521vw 1.042vw;
+    padding: 0.43em 0.872em;
     align-items: center;
     background-color: #840032;
 }
 
 .navLeft{
     justify-content: flex-start;
-    padding-left: 9%;
+    padding-left: 8.5%;
 }
+
 .navRight{
     justify-content: flex-end;
-    padding-right: 9%;
+    padding-right: 8.5%;
 }
 
 .navLeft, .navRight{
     display: flex;
-    gap: 4vw;
+    gap: 3.33em;
 
     
 }
 
 .navLeft a, .navRight a{
+    position: relative;
     font-family: "Roboto Mono", monospace;
     font-weight: 700;
-    font-size: 1.2vw;
+    font-size: 1em;
     color: #FCA311;
     text-decoration: none;
+    text-transform: uppercase;
 }
+
+.navLeft a::after, .navRight a::after{
+    content: "";
+    position: absolute;
+    left: -0.4em;
+    right:-0.4em;
+    bottom: -0.42em;
+    height: 0.17em;
+    background-color: #FCA311;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.navLeft a:hover::after, .navRight a:hover::after{
+    transform: scaleX(1);
+}
+
+.navLeft a.active::after, .navRight a.active::after{
+    transform: scaleX(1);
+}
+
 
 .icon{
     position: relative;
     z-index: 2;
-    width: 9vw;
-    height: 9vw;
+    width: 6.94em;
+    height: 6.94em;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    transform: translateY(1.8vw);
+    transform: translateY(1.30em);
 }
 
 .icon img{

@@ -1,8 +1,17 @@
 .factionPage{
-    margin-top: 8vw;
     display: flex;
-    flex-wrap: wrap;
-    gap: 2vw;
-    justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 6vw;
+}
+
+.factionPageTitle{
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "JetBrains Mono", sans-serif;
+    font-weight: 900;
+    font-size: 14vw;
+    color: #FCA311;
+    text-align: left;
+    width: 100%;
+    margin-left: -0.080em; 
 }

@@ -9,4 +9,9 @@ export const navLink = [
         to : "/explore",
         side : "right",
     },
+    {
+        label:"Map",
+        to : "/map",
+        side : "right",
+    },
 ];

@@ -19,7 +19,7 @@
     );
 }
 
-.pageTitle{
+.explorePageTitle{
     margin: 0;
     text-transform: uppercase;
     font-family: "JetBrains Mono", sans-serif;
@@ -28,7 +28,7 @@
     color: #FCA311;
     text-align: left;
     width: 100%;
-    margin-left: -0.083em; 
+    margin-left: -0.080em; 
 }
 
 .cardGrid{
