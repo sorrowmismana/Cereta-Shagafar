@@ -1,0 +1,8 @@
+.ExplorePage{
+    margin-top: 8vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    justify-content: center;
+    flex-direction: row;
+}

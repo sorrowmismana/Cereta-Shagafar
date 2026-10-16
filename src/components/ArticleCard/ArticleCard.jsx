@@ -1,23 +1,28 @@
-import image from "./assets/items/Shagafarian-lohtikhar.png"
-import religion_icon from "./assets/icon/religion_icon.svg"
 import "./ArticleCard.css"
-function ArticleCard(){
+import { Link } from "react-router-dom";
+import { CategoryIcon } from "../../data/CategoryIcon";
+
+
+function ArticleCard({id, name, image, category}){
+    const icon = CategoryIcon[category];
+    const iconStyle = icon ? { "--icon": `url("${icon}")` } : {}; 
+    
     return(
-        <div className="articleCard">
+        <Link to={`/articles/${id}`} className="articleCard" style={iconStyle}>
             <div className="image">
                 <img src={image}/>
             </div>
             <div className="articleIcon">
-                <div src={religion_icon} className="itemCardIcon">
+                <div className="articleCardIcon">
                 </div>
             </div>
             <div className="title">
-                <div className="articleCategory"> item</div>
+                <div className="articleCategory"> {category}</div>
                 <div className="articleTitle"> 
-                    <h2>TITLE</h2>
+                    <h3  style={{ "--len": name.length }}>{name}</h3>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

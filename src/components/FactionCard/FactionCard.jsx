@@ -5,8 +5,6 @@ import { CategoryIcon } from "../../data/CategoryIcon";
 function FactionCard({ id, name, image, category }){
     const icon = CategoryIcon[category];
     const iconStyle = icon ? { "--icon": `url("${icon}")` } : {};
-
-    console.log("category:", category, "icon:", icon, "map:", CategoryIcon);
     return(
         <Link to={`/factions/${id}`} className="itemCard" style={iconStyle}>
             <div className="itemCardTop">
