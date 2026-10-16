@@ -1,5 +1,10 @@
 import Pafumis from "../assets/factions/Pafumis.png"
 
 export const factions = [
-    { id: "Pafumis", name: "Pafumis", image: Pafumis},
+    { 
+        id: "pafumis", 
+        name: "Pafumis", 
+        image: Pafumis,
+        category: "religion",
+    },
 ];

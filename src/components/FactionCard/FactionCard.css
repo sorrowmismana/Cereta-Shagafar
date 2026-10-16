@@ -4,18 +4,19 @@
     display: flex;
     flex-direction: column;
     width: 25vw;           
-    height: 42vw;
+    height: auto;
     gap:1vw;
-    --bar: 4.2vw;
+    --bar: 13.748%;
     --line: 0.3vw;
     cursor:pointer;
+    text-decoration: none;
 }
 
 .itemCardTop{
     position: relative;
     width:100%;
     aspect-ratio: 576.5/792.56;
-    --gapY: 0.2%;
+    --gapY: 0.3%;
     --gapX: 0.7%
 }
 
@@ -53,11 +54,11 @@
 
 .itemCardImage{
     position: absolute;
-    inset: var(--gapY) var(--gapX);
+    inset: calc(var(--gapY) + 1.2%) var(--gapX) var(--gapY) var(--gapX);
     z-index: 2;
     overflow: hidden;
-    -webkit-mask: url("./assets/borders/border_card_top_mask_1.svg") 0 0 / 100% 100% no-repeat;;
-            mask: url("./assets/borders/border_card_top_mask_1.svg") 0 0 / 100% 100% no-repeat;;
+    -webkit-mask: url("../../assets/borders/border_card_top_mask_1.svg") 0 0 / 100% 100% no-repeat;;
+            mask: url("../../assets/borders/border_card_top_mask_1.svg") 0 0 / 100% 100% no-repeat;;
     
 }   
 
@@ -88,8 +89,8 @@
     height: 100%;
     background-color: #193B62;
     transition: background-color 0.4s ease;
-    -webkit-mask: url("./assets/borders/border_card_top_1.svg") 0 0 / 100% 100% no-repeat;
-            mask: url("./assets/borders/border_card_top_1.svg") 0 0 / 100% 100% no-repeat;
+    -webkit-mask: url("../../assets/borders/border_card_top_1.svg") 0 0 / 100% 100% no-repeat;
+            mask: url("../../assets/borders/border_card_top_1.svg") 0 0 / 100% 100% no-repeat;
 }
 
 .itemCard:hover .itemCardFrame{
@@ -101,8 +102,8 @@
     aspect-ratio: 1;
     background-color: #A2B2C3;
     transition: background-color 0.4s ease, translate 0.4s ease;
-    -webkit-mask: url("./assets/icon/religion_icon.svg")0 0 / 100% 100% no-repeat;
-            mask: url("./assets/icon/religion_icon.svg")0 0 / 100% 100% no-repeat;
+    -webkit-mask: var(--icon) center/ contain no-repeat;
+            mask: var(--icon) center/ contain no-repeat;
 }
 
 .itemCard:hover .itemCardIcon{
@@ -117,7 +118,8 @@
     gap: 1vw;
     width:100%;
     height:6%;
-    flex:0 0 var(--bar);
+    flex:none;
+    aspect-ratio: 576.5 / 79.256;
 }
 
 .squareLeft, .squareRight{
@@ -153,6 +155,7 @@
     font-size: 1.5vw;
     color: #8A98A7;
     transition: color 0.6s ease, font-size 0.5s ease;
+    text-transform: uppercase;
 }
 
 .itemCard:hover .itemCardName{

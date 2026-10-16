@@ -1,9 +1,9 @@
 import mainBorder from "./assets/borders/shagafar_border_1.svg";
 import descBorder from "./assets/borders/shagafar_border_2.svg";
-import lohtikhar from "./assets/items/Shagafarian-lohtikhar.png"
-import mainMask1 from "./assets/borders/border_mask_1.1.svg";
-import quoteBorder from "./assets/borders/shagafar_border_3_quote.svg"
-import "./ItemHero.css"
+import lohtikhar from "./assets/items/Shagafarian-lohtikhar.png";
+import mainMask1 from "./assets/borders/border_mask_1.1.svg";;
+import quoteBorder from "./assets/borders/shagafar_border_3_quote.svg";
+import "./ItemHero.css";
 
 
 function ItemHero(){
