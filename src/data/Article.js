@@ -8,25 +8,25 @@ export const articles = [
         id: "manue_article_card", 
         name: "Manue", 
         image: Manue,
-        category: "military",
+        category: "Military",
     },
     { 
         id: "lohtikhar_article_card", 
         name: "Lohtikhar", 
         image: Lohtikhar,
-        category: "religion",
+        category: "Religion",
     },
     { 
         id: "lankhar_article_card", 
         name: "Lankhar", 
         image: Lankhar,
-        category: "religion",
+        category: "Science",
     },
     { 
         id: "pafumis_article_card", 
         name: "Pafumis", 
         image: Pafumis,
-        category: "military",
+        category: "Military",
     },
 ];
 
