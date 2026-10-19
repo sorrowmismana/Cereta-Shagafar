@@ -1,11 +1,40 @@
 import "./FilterBar.css";
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { CategoryIcon } from "../../data/CategoryIcon";
 
 function FilterBar({ label, options, onSelect }){
     const [open, setOpen] = useState(false);
     const [selected, setSelected] = useState(label);
     const [hovered, setHovered] = useState(null);
+
+    const filterRef = useRef(null)
+
+    useEffect(function(){
+        if (!open) return;
+
+        function handleOutside(event){
+            if (filterRef.current && !filterRef.current.contains(event.target)){
+                setOpen(false);
+                setHovered(null);
+            }
+        }
+
+        function handleKey(event){
+            if (event.key === "Escape"){
+                setOpen(false);
+                setHovered(null);
+            }
+        }
+
+        document.addEventListener("pointerdown", handleOutside);
+        document.addEventListener("keydown", handleKey);
+
+        return function(){
+            document.removeEventListener("pointerdown", handleOutside);
+            document.removeEventListener("keydown", handleKey);
+        };
+    }, [open]);
+
     function toggle(){
         setOpen(!open);
     }
@@ -23,6 +52,7 @@ function FilterBar({ label, options, onSelect }){
 
     return(
         <div
+            ref={filterRef}
             className={"filterBar " + (open ? "open" : "")}
             style={{ "--count": options.length }}
         >
@@ -39,8 +69,6 @@ function FilterBar({ label, options, onSelect }){
                 </div>
                 <div className="filterArrows"></div>
             </div>
-
-            {/* the list is now a child of filterBar, not filterTitle */}
             <div className="filterList">
                 <div className="filterListInner">
                     {options.map(function(option, i){
