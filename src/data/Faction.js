@@ -5,6 +5,6 @@ export const factions = [
         id: "pafumis", 
         name: "Pafumis", 
         image: Pafumis,
-        category: "religion",
+        category: "Religion",
     },
 ];

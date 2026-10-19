@@ -37,6 +37,7 @@ function FilterBar({ label, options, onSelect }){
                 <div className="filterTitleLabel" onClick={toggle}>
                     {selected}
                 </div>
+                <div className="filterArrows"></div>
             </div>
 
             {/* the list is now a child of filterBar, not filterTitle */}

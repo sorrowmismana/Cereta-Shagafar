@@ -7,8 +7,8 @@
     grid-template-areas: 
     "image image"
     "articleIcon title";
-    grid-template-columns: 1fr 3fr;
-    gap: 0.7vw;
+    grid-template-columns: 18% 1fr;
+    gap: 0.5vw;
     text-decoration: none;
 
 }   
@@ -25,26 +25,13 @@
     height: 100%;
 }
 
-.articleCard div.articleIcon{
-    grid-area: articleIcon;
-    align-self: stretch;
-    width: 100%;
-    aspect-ratio: 1/1;
-}
 
-.articleCard .articleIcon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1/1.1547;
-    min-width: 0;
-    background: #C7CFD8;
-     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
+
 
 .articleCard div.title{
+    align-self: stretch;
+    contain: size;
+    min-height: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -54,21 +41,30 @@
     padding-bottom: 2%;
     padding-left: 5%;
     padding-right: 5%;
+    transition: background-color 0.5s ease;
+}
+
+.articleCard:hover div.title{
+    background-color: #840032;
 }
 
 .articleCard .articleTitle{
-    font-size: clamp(1vw, calc(28vw / var(--len)), 2vw);
+    flex: 1 1 0;
+    min-height: 0;
+    align-items: center;
     margin: 0;
     padding: 0;
+    display: block;
     flex: 3;
     color: #C7CFD8;
     font-family: "Inter", sans-serif;
     font-weight: 900;
-    font-size: 2vw;
+    font-size: 3vw;
     text-transform: uppercase;
     top: 0;
     overflow: hidden;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
+    transition: color 0.5s ease;
 }
 
 
@@ -76,15 +72,22 @@
     text-transform: capitalize;
 }
 
+.articleCard:hover .articleTitle{
+    color: #FCA311;
+}
 
 .articleCard .articleCategory{
-    flex: 1;
+    flex: 0 0 auto;
     color: #A2B2C3;
     font-family: "Inter", sans-serif;
     font-weight: 700;
     font-size: 1vw;
+    transition: color o.5s ease;
 }
 
+.articleCard:hover .articleCategory{
+    color: #C06D32;
+}
 
 .articleCardIcon{
     width: 60%;
@@ -93,4 +96,29 @@
     transition: background-color 0.4s ease, translate 0.4s ease;
     -webkit-mask: var(--icon) center/ contain no-repeat;
             mask: var(--icon) center/ contain no-repeat;
+}
+
+.articleCard:hover .articleCardIcon{
+    background-color: #840032;
+
+}
+
+.articleCard .articleIcon{
+    grid-area: articleIcon;
+    align-self: start;
+    justify-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1.1547;
+    min-width: 0;
+    background: #C7CFD8;
+     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: background-color 0.5s ease;
+}
+
+.articleCard:hover .articleIcon{
+    background-color: #FCA311;
 }

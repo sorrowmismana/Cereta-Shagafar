@@ -118,6 +118,7 @@
     color: #D9A22D;
     padding-left: calc(var(--w) * 0.12);
     padding-right: calc(var(--w) * 0.8);
+    cursor: pointer;
 }
 
 .filterList{
@@ -187,7 +188,7 @@
 
 .filterRowText{
     pointer-events: auto;
-    cursor: pointer;
+
     --bar: 0.57;                                   /* bar height as a fraction of --w */
     height: calc(var(--w) * var(--bar));          /* hexagon is 1.1547 × --w tall */
     box-sizing: border-box;
@@ -207,4 +208,53 @@
 
 .filterRow:hover{
     filter: brightness(1.25);
+}
+
+.filterArrows{
+    --aw: calc(var(--w) * 0.3);                       /* chevron width */
+    --v: calc(var(--line) * 1.1547);                  /* vertical thickness of each arm */
+    --d: calc(var(--aw) * 0.28868);                   /* tip depth: 0.5 × tan 30° */
+    --ch: calc(var(--d) + var(--v));
+    position: absolute;
+    right: calc(var(--w) * 0.2);
+    top: 0;
+    height: 100%;
+    width: var(--aw);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(var(--w) * 0.12);
+    pointer-events: none;
+}
+
+.filterArrows::before,
+.filterArrows::after{
+    content: "";
+    width: 100%;
+    height: var(--ch);
+    background-color: #D9A22D;
+    transition: background-color 0.4s ease;
+}
+
+.filterArrows::before{
+    clip-path: polygon(
+        0 100%,
+        50% calc(100% - var(--d)),
+        100% 100%,
+        100% calc(100% - var(--v)),
+        50% 0,
+        0 calc(100% - var(--v))
+    );
+}
+
+.filterArrows::after{
+    clip-path: polygon(
+        0 0,
+        50% var(--d),
+        100% 0,
+        100% var(--v),
+        50% 100%,
+        0 var(--v)
+    );
 }

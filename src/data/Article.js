@@ -8,7 +8,7 @@ export const articles = [
         id: "manue_article_card", 
         name: "Manue", 
         image: Manue,
-        category: "Military",
+        category: "Religion",
     },
     { 
         id: "lohtikhar_article_card", 
