@@ -1,14 +1,12 @@
 import mainBorder from "../../assets/borders/shagafar_border_1.svg";
 import descBorder from "../../assets/borders/shagafar_border_2.svg";
-import mainMask1 from "../../assets/borders/border_mask_1.1.svg";;
 import quoteBorder from "../../assets/borders/shagafar_border_3_quote.svg";
 import "./ItemHero.css";
-import { Link } from "react-router-dom"
 
 
-function ItemHero({id, title, image, quote, summary}){
+function ItemHero({id, name, image, category}){
     return(
-        <Link to={`items/${id}`} className="itemHeroLink">
+        <div className="itemHeroLink">
             <div className="itemHero">
                 <div className="itemImage">
                     <img src={image}></img>
@@ -22,11 +20,11 @@ function ItemHero({id, title, image, quote, summary}){
                         
                     </div>
                     <div className="itemHeroDescTitle">
-                        <h1>{title}</h1>
+                        <h1>{name}</h1>
                     </div>
                 </div>
             </div>
-        </Link>
+        </div>
     );
 }
 export default ItemHero

@@ -1,0 +1,6 @@
+.itemPage{
+    margin-top: 4vw;
+    display: flex;
+    flex-direction: column;
+    gap: 6vw;
+}

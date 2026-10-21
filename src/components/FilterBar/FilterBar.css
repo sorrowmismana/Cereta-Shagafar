@@ -94,6 +94,7 @@
     bottom: calc(var(--w) * 0.1);         /* move the line up or down here only */
     height: var(--line);
     background: #840032;
+    z-index: 10;
 }
 
 .filterBar.open .filterIcon::before{
@@ -189,13 +190,13 @@
 .filterRowText{
     pointer-events: auto;
 
-    --bar: 0.57;                                   /* bar height as a fraction of --w */
-    height: calc(var(--w) * var(--bar));          /* hexagon is 1.1547 × --w tall */
+    --bar: 0.57;                                   
+    height: calc(var(--w) * var(--bar));         
     box-sizing: border-box;
     flex: 1;
     display: flex;
     align-items: center;
-    margin-left: calc(var(--w) * -0.5);  /* start at the hexagon's center */
+    margin-left: calc(var(--w) * -0.5);  
     padding: 0 calc(var(--w) * 0.3) 0 calc(var(--w));
     background: var(--c);
     font-family: "Inter", sans-serif;
@@ -203,7 +204,7 @@
     font-size: calc(var(--w) * 0.3);
     text-transform: uppercase;
     white-space: nowrap;
-    color: #E5E5E5;
+    color: #b8bed1;
 }
 
 .filterRow:hover{

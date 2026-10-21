@@ -5,25 +5,25 @@ import Lankhar from "../assets/items/Lankhar.jpg"
 
 export const articles = [
     { 
-        id: "manue_article_card", 
+        id: "manue", 
         name: "Manue", 
         image: Manue,
         category: "Religion",
     },
     { 
-        id: "lohtikhar_article_card", 
+        id: "lohtikhar", 
         name: "Lohtikhar", 
         image: Lohtikhar,
         category: "Religion",
     },
     { 
-        id: "lankhar_article_card", 
+        id: "lankhar", 
         name: "Lankhar", 
         image: Lankhar,
         category: "Science",
     },
     { 
-        id: "pafumis_article_card", 
+        id: "pafumis", 
         name: "Pafumis", 
         image: Pafumis,
         category: "Military",

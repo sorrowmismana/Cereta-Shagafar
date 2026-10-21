@@ -51,20 +51,7 @@ function ExplorePage(){
                         />
                     );
                 })}
-                {filters.map(function(f){
-                    function onSelect(option){
-                        handleSelect(f.id, option);
-                    }
-
-                    return(
-                        <FilterBar
-                            key={f.id}
-                            label={f.label}
-                            options={f.options}
-                            onSelect={onSelect}
-                        />
-                    );
-                })}
+            
             </div>
 
             

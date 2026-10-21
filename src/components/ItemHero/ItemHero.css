@@ -9,7 +9,7 @@
 .itemHero{
     position: relative;
     width: 88vw;
-    margin: 9vw auto 0;
+    margin: 5vw auto 0;
     aspect-ratio: 1372.6/564.62;
     container-type: inline-size;
 }
@@ -22,8 +22,8 @@
   height: 100%;
   z-index: 1;
 
-  -webkit-mask: url("./assets/borders/border_mask_1.1.svg") 0 0 / 100% 100% no-repeat;
-          mask: url("./assets/borders/border_mask_1.1.svg") 0 0 / 100% 100% no-repeat;
+  -webkit-mask: url("../../assets/borders/border_mask_1.1.svg") 0 0 / 100% 100% no-repeat;
+          mask: url("../../assets/borders/border_mask_1.1.svg") 0 0 / 100% 100% no-repeat;
 }
 
 .itemImage img{
@@ -76,7 +76,7 @@
     font-size: 3.73cqw;
     color: #FCA311;
     line-height: 1;
-
+    text-transform: uppercase;
 
 }
 
