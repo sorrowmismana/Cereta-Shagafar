@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useRef } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, NavLink,Link } from "react-router-dom";
 import "./Transition.css";
 
 const TransitionContext = createContext(null);
@@ -49,7 +49,7 @@ export function TransitionLink({ to, children, ...rest }){
         go(to);
     }
 
-    return <Link to={to} onClick={handleClick} {...rest}>{children}</Link>;
+    return <NavLink to={to} onClick={handleClick} {...rest}>{children}</NavLink>;
 }
 
 export function useTransition(){
