@@ -1,0 +1,23 @@
+.fadeOverlay{
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: #1f0115;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.fadeOverlay.cover{
+    opacity: 1;
+    pointer-events: auto;     /* blocks clicks while covered */
+}
+
+.fadeOverlay.reveal{
+    opacity: 0;
+    pointer-events: auto;     /* still blocks clicks during the fade out */
+}
+
+@media (prefers-reduced-motion: reduce){
+    .fadeOverlay{ transition-duration: 0.01s; }
+}

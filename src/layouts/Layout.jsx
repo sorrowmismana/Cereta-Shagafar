@@ -4,7 +4,8 @@ import { Outlet } from "react-router-dom"
 
 function Layout(){
     return(
-        <>
+        <>  
+            <div className="hexBG"></div>
             <NavBar/>
             <main className="wrapper">
                 <Outlet></Outlet>

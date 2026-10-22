@@ -26,6 +26,8 @@
     text-align: left;
     width: 100%;
     margin-left: -0.080em; 
+    height: auto;
+    margin-bottom: -2.8vw;
 }
 
 .cardGrid{

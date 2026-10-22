@@ -7,7 +7,6 @@ import ItemPage from "./pages/itemPage/ItemPage";
 function App() {
   return(
     <>
-    <BrowserRouter>
         <Routes>
           <Route element={<Layout/>}>
             <Route path="/" element={<Explore/>}/>
@@ -16,7 +15,6 @@ function App() {
             <Route path="/articles/:id" element={<ItemPage/>}/>
           </Route>
         </Routes>
-      </BrowserRouter>
     </>
   );
  

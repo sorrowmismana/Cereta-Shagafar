@@ -12,3 +12,14 @@
         margin:  10vw auto 0 ;
     }
 }
+
+.hexBG{
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='398.88' height='690.89' viewBox='0 0 398.88 690.89' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23331722' stroke-width='5.43' opacity='0.67'%3E%3Cpolygon points='199.44,115.15 398.88,230.29 398.88,460.59 199.44,575.74 0,460.59 0,230.29'/%3E%3Cpolygon points='0,-230.29 199.44,-115.15 199.44,115.15 0,230.29 -199.44,115.15 -199.44,-115.15'/%3E%3Cpolygon points='398.88,-230.29 598.32,-115.15 598.32,115.15 398.88,230.29 199.44,115.15 199.44,-115.15'/%3E%3Cpolygon points='0,460.6 199.44,575.74 199.44,806.04 0,921.19 -199.44,806.04 -199.44,575.74'/%3E%3Cpolygon points='398.88,460.6 598.32,575.74 598.32,806.04 398.88,921.19 199.44,806.04 199.44,575.74'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 22.375vw auto;
+    background-position: center;
+    
+}   
