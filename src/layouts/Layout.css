@@ -2,5 +2,13 @@
 .wrapper{
     width: 90%;
     max-width: 2500px;
-    margin:  6vw auto 0  ;
+    margin:  6vw auto 0 ;
+}
+
+@media (max-width:768px) {
+    .wrapper{
+        width: 90%;
+        max-width: 2500px;
+        margin:  10vw auto 0 ;
+    }
 }

@@ -9,6 +9,7 @@
     flex-wrap: wrap;
     gap: 3vw;
     align-items: flex-start;
+    flex-direction: row;
 }
 
 .filterDiv{
@@ -32,4 +33,43 @@
     grid-template-columns: repeat(3,1fr);
     gap: 2vw;
     
+}
+
+@media (max-width:768px) {
+    .explorePage{
+    display: flex;
+    flex-direction: column;
+    gap: 8vw;
+    }
+
+    .filterGroup{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6vw;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .filterDiv{
+        display: flex;
+    }
+
+    .explorePageTitle{
+        margin: 0;
+        text-transform: uppercase;
+        font-family: "JetBrains Mono", sans-serif;
+        font-weight: 900;
+        font-size: 21.5vw;
+        color: #FCA311;
+        text-align: center;
+        width: 100%;
+        margin-left: -0.080em; 
+    }
+
+    .cardGrid{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 10vw;
+        
+    }
 }

@@ -259,3 +259,268 @@
         0 var(--v)
     );
 }
+
+@media (max-width:768px) {
+    .filterBar{
+    --cut: calc(var(--w) * 1.03);
+    --w: 15vw;
+    --line: calc(var(--w) * 0.05);
+    --gap: calc(var(--w) * 0.075);
+    --bottom: calc(var(--w) * 0.57735 + var(--line) / 2);  /* where the line sits, measured from the top of the row */
+    --h: calc(var(--w) * 0.35); 
+    --base: #C1121F;
+    --darkest: #2B0A3D;
+
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: row;
+    }
+
+    .filterBadge{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--gap);
+        width: var(--w);
+        position: relative;
+        z-index: 6;
+    }
+
+    .filterIcon{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        aspect-ratio: 1 / 1.1547;
+        
+    }
+
+    .filterIcon::before{
+        content: "";
+        background-color: #FCA311;
+        clip-path: polygon(
+            evenodd,
+            50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%, 50% 0%,
+            50% 5%, 95% 27.5%, 95% 72.5%, 50% 95%, 5% 72.5%, 5% 27.5%, 50% 5%
+        );
+        transition: background-color 0.6s ease;
+        position: absolute;
+        inset: 0;
+    }
+
+    .filterGlyph{
+        position: relative;
+        width: 40%;
+        aspect-ratio: 1;
+        background-color: #FCA311;
+        -webkit-mask: var(--icon) center / contain no-repeat;
+                mask: var(--icon) center / contain no-repeat;
+        animation: glyphIn 0.25s ease;
+    }
+
+    @keyframes glyphIn{
+        from{ opacity: 0; transform: scale(0.8); }
+        to{ opacity: 1; transform: scale(1); }
+    }
+
+    .badgeV{
+        width: 100%;
+        aspect-ratio: 1 / 0.3464;
+        margin-top: -23.09%;          /* tucks the V up under the hexagon's slanted edges */
+        background: #840032;
+        clip-path: polygon(
+            0 0,
+            50% 83.33%,
+            100% 0,
+            100% 16.67%,
+            50% 100%,
+            0 16.67%
+        );
+        transition: background-color 0.6s ease;
+    }
+    .filterTitle{
+        position: relative;
+        flex:1;
+        width: auto;
+        height: calc(var(--w) * 1.1547);      /* same height as the hexagon */
+        display: flex;
+        align-items: center;                  /* text is always at the hexagon's middle */
+    }
+
+    .filterTitle::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: calc(var(--w) * 0.1);         /* move the line up or down here only */
+        height: var(--line);
+        background: #840032;
+        z-index: 30;
+    }
+
+    .filterBar.open .filterIcon::before{
+        background-color: #840032;
+    }
+
+    .filterBar.open .filterTitle::after{
+        background-color: #FCA311;
+    }
+
+    .filterBar.open .badgeV{
+        background-color: #FCA311;
+    }
+
+    .filterTitleLabel{
+        text-transform: uppercase;
+        font-family: "Inter", sans-serif;
+        font-weight: 200;
+        font-size: calc(var(--w) * 0.4);
+        line-height: 1;                          /* text height = 0.4 × --w */
+        text-transform: uppercase;
+        color: #D9A22D;
+        padding-left: calc(var(--w) * 0.3);
+        padding-right: calc(var(--w) * 0.8);
+        cursor: pointer;
+    }
+
+    .filterList{
+        position: absolute;
+        top: var(--cut);
+        clip-path: polygon(
+            0 calc(var(--w) * 0.0277),                  /* V's lower edge, left end */
+            calc(var(--w) * 0.5) calc(var(--w) * 0.3164),  /* V's lower tip */
+            var(--w) calc(var(--w) * 0.0277),           /* V's lower edge, right end */
+            var(--w) 0,                                 /* step up to the line */
+            100% 0,
+            100% 100%,
+            0 100%
+        );   /* just below the line */
+        left: 0;
+        right: 0;
+        z-index: 10;
+        display: grid;
+        grid-template-rows: 0fr;        
+        transition: grid-template-rows 0.4s ease;
+    }
+
+    .filterBar.open .filterList{
+        grid-template-rows: 1fr;         /* open */
+    }
+
+    .filterRow:first-child{
+        margin-top: calc(var(--w) * -0.3);   /* half the hexagon's height (1.1547 / 2) */
+    }
+
+    .filterListInner{
+        overflow: hidden;
+        min-height: 0;          
+        display: flex;
+        flex-direction: column;
+        gap: 0;         /* lets the row collapse to 0 */
+    }
+
+    .filterRow{
+        pointer-events: none;
+        position: relative;
+        isolation: isolate;
+        z-index: calc(var(--count) - var(--i));
+        --c: color-mix(
+            in oklab,
+            var(--base),
+            var(--darkest) calc((var(--i) + 1) / var(--count) * 100%)
+        );
+        display: flex;
+        align-items: center; 
+        gap: 0;
+        cursor: pointer;
+        transition: filter 0.2s ease;
+    }
+
+    .filterRow + .filterRow{
+        margin-top: calc(var(--w) * -0.6);   /* how far each row slides under the one before */
+    }
+    .filterRowHex{
+        z-index: 1;
+        width: var(--w);
+        aspect-ratio: 1 / 1.1547;
+        flex-shrink: 0;
+        background: var(--c);
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .filterRowText{
+        pointer-events: auto;
+
+        --bar: 0.57;                                   
+        height: calc(var(--w) * var(--bar));         
+        box-sizing: border-box;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin-left: calc(var(--w) * -0.5);  
+        padding: 0 calc(var(--w) * 0.3) 0 calc(var(--w));
+        background: var(--c);
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        font-size: calc(var(--w) * 0.3);
+        text-transform: uppercase;
+        white-space: nowrap;
+        color: #b8bed1;
+    }
+
+    .filterRow:hover{
+        filter: brightness(1.25);
+    }
+
+    .filterArrows{
+        --aw: calc(var(--w) * 0.3);                       /* chevron width */
+        --v: calc(var(--line) * 1.1547);                  /* vertical thickness of each arm */
+        --d: calc(var(--aw) * 0.28868);                   /* tip depth: 0.5 × tan 30° */
+        --ch: calc(var(--d) + var(--v));
+        position: absolute;
+        right: calc(var(--w) * 0.2);
+        top: 0;
+        height: 100%;
+        width: var(--aw);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: calc(var(--w) * 0.12);
+        pointer-events: none;
+    }
+
+    .filterArrows::before,
+    .filterArrows::after{
+        content: "";
+        width: 100%;
+        height: var(--ch);
+        background-color: #D9A22D;
+        transition: background-color 0.4s ease;
+    }
+
+    .filterArrows::before{
+        clip-path: polygon(
+            0 100%,
+            50% calc(100% - var(--d)),
+            100% 100%,
+            100% calc(100% - var(--v)),
+            50% 0,
+            0 calc(100% - var(--v))
+        );
+    }
+
+    .filterArrows::after{
+        clip-path: polygon(
+            0 0,
+            50% var(--d),
+            100% 0,
+            100% var(--v),
+            50% 100%,
+            0 var(--v)
+        );
+    }
+}
