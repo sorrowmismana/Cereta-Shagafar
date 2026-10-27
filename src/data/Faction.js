@@ -1,4 +1,4 @@
-import Pafumis from "../assets/factions/Pafumis.png"
+import Pafumis from "../assets/factions/Pafumis.PNG"
 
 export const factions = [
     { 
