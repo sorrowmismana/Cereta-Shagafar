@@ -1,5 +1,5 @@
-import Pafumis from "../assets/factions/Pafumis.png"
-import Manue from "../assets/characters/Manue.png"
+import Pafumis from "../assets/factions/Pafumis.PNG"
+import Manue from "../assets/characters/manue.PNG"
 import Lohtikhar from "../assets/items/Shagafarian-Lohtikhar.png"
 import Lankhar from "../assets/items/Lankhar.jpg"
 
