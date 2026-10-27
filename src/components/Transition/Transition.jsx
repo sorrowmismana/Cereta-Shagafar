@@ -3,7 +3,6 @@ import { useNavigate, NavLink,Link } from "react-router-dom";
 import "./Transition.css";
 
 const TransitionContext = createContext(null);
-     // must match the CSS duration
 const FADE_IN = 400;     // ms to fade to black
 const HOLD = 300;        // ms to stay fully black
 const FADE_OUT = 400;    // ms to fade back
