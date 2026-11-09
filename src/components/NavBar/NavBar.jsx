@@ -13,7 +13,9 @@ function NavBar(){
                 {left.map(i=> (<TransitionLink key={i.to} to={i.to}>{i.label}</TransitionLink>))}
             </div>
             <div className="icon">
-                <img src={emblem}></img>
+                <TransitionLink to="/">
+                    <img src={emblem}></img>
+                </TransitionLink>
             </div>
             <div className="navRight">
                 {right.map(i =>(<TransitionLink key={i.to} to={i.to}>{i.label}</TransitionLink>))}

@@ -1,0 +1,47 @@
+.landingHeroDiv{
+    width: 100%;
+    aspect-ratio: 1920 / 1021;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.landingHeroDivArch{
+   object-fit: cover    ;
+   z-index: 2;
+}
+
+.landingHeroDiv img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.landingHeroDivImg{
+    object-fit: cover;
+    z-index: 1;
+}
+
+.landingHeroDivTitle{
+    position: absolute;
+    left: 50%;
+    display: flex;
+    transform: translateX(-48%);
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 3%;
+    width: auto;
+    z-index: 3;
+    text-transform: uppercase;
+    font-family: "JetBrains Mono", sans-serif;
+    color: #fca311;
+    font-weight: 900;
+    font-size: 7.5cqw;
+    letter-spacing: 18%;
+}
