@@ -10,6 +10,9 @@ function LandingHero(){
             <div className="landingHeroDivTitle">
                 SHAGAFAR
             </div>
+            <div className="landingHeroDivSub">
+                INDUSTRY | UNITY | MILITARY
+            </div>
         </div>
     );
 }

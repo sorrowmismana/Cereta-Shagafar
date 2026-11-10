@@ -67,14 +67,14 @@
 .icon{
     position: relative;
     z-index: 2;
-    width: calc(var(--navh)*2.373);
-    height: calc(var(--navh)*2.560);
+    width: calc(var(--navh)*2.773);
+    height: calc(var(--navh)*2.960);
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    transform: translateY(calc(var(--navh) * 0.48));
+    transform: translateY(calc(var(--navh) * 0.45));
 }
 
 .icon img{

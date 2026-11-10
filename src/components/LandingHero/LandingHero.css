@@ -35,13 +35,32 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 3%;
+    bottom: 6%;
     width: auto;
     z-index: 3;
     text-transform: uppercase;
     font-family: "JetBrains Mono", sans-serif;
     color: #fca311;
     font-weight: 900;
-    font-size: 7.5cqw;
+    font-size: 7cqw;
+    letter-spacing: 18%;
+}
+
+.landingHeroDivSub{
+    position: absolute;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 3%;
+    width: auto;
+    z-index: 3;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    color: #F1E8CD;
+    font-weight: 600;
+    font-size: 1.3cqw;
     letter-spacing: 18%;
 }
