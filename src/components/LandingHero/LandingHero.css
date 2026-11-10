@@ -9,6 +9,7 @@
     display: flex;
 }
 
+
 .landingHeroDivArch{
    object-fit: cover    ;
    z-index: 2;
@@ -64,3 +65,81 @@
     font-size: 1.3cqw;
     letter-spacing: 18%;
 }
+
+
+
+@media (max-width:768px) {
+    .landingHeroDiv{
+        width: 100%;
+        aspect-ratio: 402 / 812;
+        overflow: hidden;
+        position: relative;
+        z-index: 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+
+    .landingHeroDivArch{
+        object-fit: cover    ;
+        z-index: 2;
+    }
+
+    .landingHeroDiv img{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .landingHeroDivImg{
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .landingHeroDivTitle{
+        position: absolute;
+        left: 50%;
+        display: flex;
+        transform: translateX(-48%);
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 6%;
+        width: auto;
+        z-index: 3;
+        text-transform: uppercase;
+        font-family: "JetBrains Mono", sans-serif;
+        color: #fca311;
+        font-weight: 900;
+        font-size: 11cqw;
+        letter-spacing: 18%;
+    }
+
+    .landingHeroDivSub{
+        position: absolute;
+        left: 50%;
+        display: flex;
+        transform: translateX(-50%);
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 3%;
+        width: auto;
+        z-index: 3;
+        text-transform: uppercase;
+        font-family: "Inter", sans-serif;
+        color: #F1E8CD;
+        font-weight: 600;
+        font-size: 2.4cqw;
+        letter-spacing: 18%;
+    }
+
+
+
+
+
+}
+

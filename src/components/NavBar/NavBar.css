@@ -65,6 +65,7 @@
 
 
 .icon{
+    align-self: start;
     position: relative;
     z-index: 2;
     width: calc(var(--navh)*2.773);
