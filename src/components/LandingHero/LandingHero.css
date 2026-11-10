@@ -71,7 +71,7 @@
 @media (max-width:768px) {
     .landingHeroDiv{
         width: 100%;
-        aspect-ratio: 402 / 812;
+        aspect-ratio: 402 / 700;
         overflow: hidden;
         position: relative;
         z-index: 0;
