@@ -6,19 +6,18 @@
     text-decoration: none;
 }
 
-.itemHero{
+.itemHero {
     position: relative;
     width: 88vw;
     margin: 5vw auto 0;
-    aspect-ratio: 1372.6/564.62;
+    aspect-ratio: 1597.4 / 692.7;
     container-type: inline-size;
 }
-
 .itemImage{
   position: absolute;
-  left: 4%;
+  left: 1.5%;
   top: 0;
-  width: 40.8%;
+  width: 42.8%;
   height: 100%;
   z-index: 1;
 
@@ -46,7 +45,7 @@
     width: 37.51%;
     height: 124.67%;
     top: -12.335%;
-    right: 10%;
+    right: 8.5%;
     z-index:3;
     justify-content: center;
     display: flex;
@@ -87,7 +86,7 @@
 
 .itemHeroDescQuoteDiv{
     position: absolute;
-    width: 90%;
+    width: 95%;
     height: 20%;
     top:14%;
     justify-content: left;    

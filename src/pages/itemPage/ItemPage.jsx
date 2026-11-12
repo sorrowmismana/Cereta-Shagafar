@@ -2,6 +2,7 @@ import "./ItemPage.css"
 import { articles } from "../../data/Article";
 import { useParams } from "react-router-dom";
 import ItemHero from "../../components/ItemHero/ItemHero";
+import ItemInfo from "../../components/ItemInfo/ItemInfo";
 
 function ItemPage(){
     const {id} = useParams();
@@ -12,6 +13,7 @@ function ItemPage(){
     return(
         <div className="itemPage">
             <ItemHero {...article}/>
+            <ItemInfo></ItemInfo>
         </div>
     );
 }

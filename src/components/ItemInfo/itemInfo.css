@@ -1,0 +1,59 @@
+.itemInfoWrapper {
+    position: relative;
+    width: 100%;
+    --cut: 1.5vw;
+    --border: 0.3vw;
+}
+
+.itemInfoBorder {
+    position: absolute;
+    inset: 0;
+    background: #FCA311;
+    clip-path: polygon(
+        var(--cut) 0,
+        calc(100% - var(--cut)) 0,
+        100% var(--cut),
+        100% calc(100% - var(--cut)),
+        calc(100% - var(--cut)) 100%,
+        var(--cut) 100%,
+        0 calc(100% - var(--cut)),
+        0 var(--cut)
+    );
+    z-index: 0;
+}
+
+.itemInfoDiv {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 60vw;
+    box-sizing: border-box;
+    background: #6C2A46;
+    padding: 3vw;
+
+    clip-path: polygon(
+        calc(var(--cut) + var(--border)) var(--border),
+        calc(100% - var(--cut) - var(--border)) var(--border),
+        calc(100% - var(--border)) calc(var(--cut) + var(--border)),
+        calc(100% - var(--border)) calc(100% - var(--cut) - var(--border)),
+        calc(100% - var(--cut) - var(--border)) calc(100% - var(--border)),
+        calc(var(--cut) + var(--border)) calc(100% - var(--border)),
+        var(--border) calc(100% - var(--cut) - var(--border)),
+        var(--border) calc(var(--cut) + var(--border))
+    );
+}
+
+
+.itemInfoDivDiamond{
+    position: absolute;
+    --diamond:6vw;
+    width: var(--diamond);
+    height: var(--diamond);
+    top: calc(var(--diamond)/-2);
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    border: var(--border) solid #fca311;
+    z-index: 2;
+    pointer-events: none;
+    background-color: #0e1725 ;
+}
