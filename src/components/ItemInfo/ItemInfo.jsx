@@ -6,7 +6,9 @@ function ItemInfo({id, name, image, category}){
         <div className="itemInfoWrapper">
             <div className="itemInfoDivDiamond"></div>
             <div className="itemInfoBorder"></div>
-            <div className="itemInfoDiv"></div>
+            <div className="itemInfoDiv">
+                test
+            </div>
         </div>
     );
 }
