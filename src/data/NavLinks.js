@@ -1,5 +1,10 @@
 export const navLink = [
     {
+        label: "Home",
+        to : "/",
+        side : "left",
+    },
+    {
         label: "Factions",
         to : "/factions",
         side : "left",
@@ -14,4 +19,5 @@ export const navLink = [
         to : "/map",
         side : "right",
     },
+
 ];

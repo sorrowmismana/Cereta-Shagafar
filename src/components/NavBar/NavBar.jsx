@@ -3,22 +3,39 @@ import "./NavBar.css";
 import { navLink } from "../../data/NavLinks";
 import { NavLink } from "react-router-dom";
 import { TransitionLink } from "../Transition/Transition"
+import { useEffect, useState } from "react";
+
 
 function NavBar(){
+
+    const[menuOpen, setMenuOpen] = useState(false);
+
+    function toggleMenu(){
+        setMenuOpen(!menuOpen);
+    }
+
+    useEffect(function(){
+        setMenuOpen(false);
+    }, [location.pathname]);
+    
     const left = navLink.filter(i => i.side === "left");
     const right = navLink.filter(i =>i.side === "right");
     return(
-        <div className="nav">
+        <div className={"nav " + (menuOpen ? "menuOpen" : "")}>
             <div className="navLeft">
                 {left.map(i=> (<TransitionLink key={i.to} to={i.to}>{i.label}</TransitionLink>))}
             </div>
-            <div className="icon">
-                <TransitionLink to="/">
+            <div className="icon" onClick={toggleMenu}>
                     <img src={emblem}></img>
-                </TransitionLink>
             </div>
             <div className="navRight">
                 {right.map(i =>(<TransitionLink key={i.to} to={i.to}>{i.label}</TransitionLink>))}
+            </div>
+            <div className={`dropdownNav ${menuOpen ? "open": ""}`}>
+                <div className="dropDownNavSearch"></div>
+                <div className="dropDownNavOption">
+                    {navLink.map(navLink => (<TransitionLink key={navLink.to} to={navLink.to}>{navLink.label}</TransitionLink>))}
+                </div>
             </div>
         </div>
     );

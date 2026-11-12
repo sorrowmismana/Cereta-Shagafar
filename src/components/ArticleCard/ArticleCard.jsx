@@ -2,6 +2,8 @@ import "./ArticleCard.css"
 import { Link } from "react-router-dom";
 import { CategoryIcon } from "../../data/CategoryIcon";
 import { useLayoutEffect, useRef } from "react";
+import { TransitionLink } from "../Transition/Transition";
+
 
 function useFitText(deps){
     const ref = useRef(null);
@@ -41,7 +43,7 @@ function ArticleCard({id, name, image, category}){
     const iconStyle = icon ? { "--icon": `url("${icon}")` } : {}; 
     const titleRef = useFitText([name])
     return(
-        <Link to={`/articles/${id}`} className="articleCard" style={iconStyle}>
+        <TransitionLink to={`/articles/${id}`} className="articleCard" style={iconStyle}>
             <div className="image">
                 <img src={image}/>
             </div>
@@ -55,7 +57,7 @@ function ArticleCard({id, name, image, category}){
                     <h3>{name}</h3>
                 </div>
             </div>
-        </Link>
+        </TransitionLink>
     )
 }
 
