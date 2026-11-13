@@ -225,7 +225,7 @@
         justify-content: center;
 
         transform: translateY(calc(var(--navh) * 0.1));
-
+        overscroll-behavior: contain;
         transition: 
                 transform 0.5s ease 0s;
     }

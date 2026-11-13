@@ -2,13 +2,14 @@
     position: relative;
     width: 100%;
     --cut: 1.5vw;
-    --border: 0.3vw;
+    --border: 0.5vw;
+    --diamond:9.2vw;
 }
 
 .itemInfoBorder {
     position: absolute;
     inset: 0;
-    background: #FCA311;
+    background: #D59937;
     clip-path: polygon(
         var(--cut) 0,
         calc(100% - var(--cut)) 0,
@@ -22,14 +23,28 @@
     z-index: 0;
 }
 
+.itemInfoDivDiamondWrapper.single {
+    justify-content: center;
+}
+
+.itemInfoDivDiamondWrapper.multiple {
+    left: 5%;
+    transform: translateY(-50%);
+    justify-content: flex-start;
+    padding-left: 3vw;
+    box-sizing: border-box;
+}
+
 .itemInfoDiv {
     position: relative;
     z-index: 1;
     width: 100%;
     min-height: 60vw;
+    padding:  5.8vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
     box-sizing: border-box;
     background: #6C2A46;
-    padding: 3vw;
 
     clip-path: polygon(
         calc(var(--cut) + var(--border)) var(--border),
@@ -45,15 +60,64 @@
 
 
 .itemInfoDivDiamond{
-    position: absolute;
-    --diamond:6vw;
+
     width: var(--diamond);
     height: var(--diamond);
-    top: calc(var(--diamond)/-2);
-    left: 50%;
-    transform: translateX(-50%) rotate(45deg);
-    border: var(--border) solid #fca311;
+    flex-shrink: 0;
+    transform:rotate(45deg);
+    border: var(--border) solid #D59937;
     z-index: 2;
-    pointer-events: none;
     background-color: #0e1725 ;
+    cursor: pointer;
+    pointer-events: auto;
+
+}
+
+.itemInfoDivDiamond.active {
+    background-color: #D59937;
+}
+
+.itemInfoDivDiamondWrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: calc(var(--diamond)/2.5);
+    z-index: 2;
+}
+
+.itemInfoDescWrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 6vw;
+    gap
+}
+
+.itemInfoDescTitle{
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 800;
+    font-style: normal;
+    color: #D59937;
+    font-size: 4cqw;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.itemInfoDescDesc{
+    height: auto;
+    width: 100%;
+    color: #E2D4BF;
+    font-family: "Playfair Display", serif;
+    font-weight: 200;
+    font-size: 2cqw;
+}
+
+.itemInfoDesc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
 }
