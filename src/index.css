@@ -1,5 +1,9 @@
 
-
+:root{
+    --z-navbar: 100;
+    --z-dropdown: 200;
+    --z-icon: 210;
+}
 
 body{
     margin:0;

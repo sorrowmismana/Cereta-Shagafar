@@ -4,18 +4,23 @@ import { navLink } from "../../data/NavLinks";
 import { NavLink } from "react-router-dom";
 import { TransitionLink } from "../Transition/Transition"
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 
 function NavBar(){
+
+    const location = useLocation()
 
     const[menuOpen, setMenuOpen] = useState(false);
 
     function toggleMenu(){
         setMenuOpen(!menuOpen);
+        console.log("1")
     }
 
     useEffect(function(){
         setMenuOpen(false);
+        console.log("2")
     }, [location.pathname]);
     
     const left = navLink.filter(i => i.side === "left");
