@@ -37,12 +37,15 @@ function NavBar(){
                 {right.map(i =>(<TransitionLink key={i.to} to={i.to}>{i.label}</TransitionLink>))}
             </div>
             <div className={`dropdownNav ${menuOpen ? "open": ""}`}>
-                <div className="dropDownNavSearch"></div>
-                <div className="dropDownNavOption">
-                    {navLink.map(navLink => (<TransitionLink key={navLink.to} to={navLink.to}>{navLink.label}</TransitionLink>))}
+                <div className="dropDownNavWrapper">
+                    <div className="dropDownNavSearchDiv"></div>
+                    <div className="dropDownNavBar"></div>
+                    <div className="dropDownNavSearchWrapper"></div>
+                    <div className="dropDownNavOption">
+                        {navLink.map(navLink => (<TransitionLink key={navLink.to} to={navLink.to}>{navLink.label}</TransitionLink>))}
+                    </div>
                 </div>
             </div>
-            <div className="dropDownNavBar"></div>
         </div>
     );
 }

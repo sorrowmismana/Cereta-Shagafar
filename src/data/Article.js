@@ -15,6 +15,9 @@ export const articles = [
         name: "Lohtikhar", 
         image: Lohtikhar,
         category: "Religion",
+        descriptionPage: {
+            Overview: "A rare delicacy that is often seen on the table of merchant, royal familiies and pafumis knight. Lohtikhar is made from sugar aquired through trading with Haradoc mixed with salt. it is often used as gift to tie the knot on alliance, cooperation and agreement. Lohtikhar is known for its smooth richness that is complement by the bold salty flavor which kept it from being overwhelming."
+        },
 
     },
     { 
