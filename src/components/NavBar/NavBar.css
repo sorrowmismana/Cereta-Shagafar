@@ -137,7 +137,7 @@
 
     .nav.menuOpen .icon{
         transform: translateY(calc(100vh - var(--navh)));     /* fallback for old browsers */
-        transform: translateY(calc(100dvh - var(--navh) - env(safe-area-inset-bottom, 0px)));
+        transform: translateY(calc(108dvh - var(--navh) - env(safe-area-inset-bottom, 0px)));
         transition: transform 0.5s ease;
     }
 
@@ -217,8 +217,8 @@
         grid-column: 2;
         position: relative;
         z-index: var(--z-icon);
-        width: calc(var(--navh)*2.373);
-        height: calc(var(--navh)*2.560);
+        width: calc(var(--navh)*3.373);
+        height: calc(var(--navh)*3.560);
 
         display: flex;
         align-items: center;

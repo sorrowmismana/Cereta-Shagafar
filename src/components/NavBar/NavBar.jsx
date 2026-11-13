@@ -42,6 +42,7 @@ function NavBar(){
                     {navLink.map(navLink => (<TransitionLink key={navLink.to} to={navLink.to}>{navLink.label}</TransitionLink>))}
                 </div>
             </div>
+            <div className="dropDownNavBar"></div>
         </div>
     );
 }
