@@ -84,6 +84,7 @@
     height: calc(var(--w) * 1.1547);      /* same height as the hexagon */
     display: flex;
     align-items: center;                  /* text is always at the hexagon's middle */
+    cursor: pointer;
 }
 
 .filterTitle::after{

@@ -63,8 +63,8 @@ function FilterBar({ label, options, onSelect }){
                 <div className="badgeV"></div>
             </div>
 
-            <div className="filterTitle">
-                <div className="filterTitleLabel" onClick={toggle}>
+            <div className="filterTitle" onClick={toggle}>
+                <div className="filterTitleLabel" >
                     {selected}
                 </div>
                 <div className="filterArrows"></div>

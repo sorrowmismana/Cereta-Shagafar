@@ -176,6 +176,7 @@
         flex-direction: column;
         padding-left: 4vw;
         gap: 1.5vw;
+        padding-right: 4vw;
     }
 
     .dropDownNavOption a{
@@ -186,6 +187,11 @@
         font-size: calc(var(--navh)*2);
         text-decoration: none;
         text-transform: uppercase;
+    }
+
+    .dropDownNavOption :hover{
+        color: #840032;
+        background-color: #FCA311;
     }
 
     .navLeft{
@@ -260,3 +266,4 @@
         z-index: 9;
     }
 }
+
