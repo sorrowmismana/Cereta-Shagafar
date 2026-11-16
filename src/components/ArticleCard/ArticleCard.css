@@ -49,7 +49,7 @@
     transition: background-color 0.5s ease;
 }
 
-.articleCard div.title:hover div.title{
+.articleCard:hover div.title{
     background-color: #840032;
 }
 
@@ -77,7 +77,7 @@
     text-transform: capitalize;
 }
 
-.articleCard div.title:hover .articleTitle{
+.articleCard:hover .articleTitle{
     color: #FCA311;
 }
 
@@ -90,7 +90,7 @@
     transition: color o.5s ease;
 }
 
-.articleCard div.title:hover .articleCategory{
+.articleCard:hover .articleCategory{
     color: #C06D32;
 }
 
@@ -107,7 +107,7 @@
             mask: var(--icon) center/ contain no-repeat;
 }
 
-.articleCard div.articleIcon:hover .articleCardIcon{
+.articleCard:hover .articleCardIcon{
     background-color: #840032;
 
 }
@@ -128,7 +128,7 @@
     transition: background-color 0.5s ease;
 }
 
-.articleCard div.articleIcon:hover .articleIcon{
+.articleCard:hover .articleIcon{
     background-color: #FCA311;
 }
 
