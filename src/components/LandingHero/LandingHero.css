@@ -1,3 +1,14 @@
+@keyframes construct {
+    from{
+        opacity:0; transform: translateY(-100%);
+    }   
+
+    to {
+        opacity:1; transform: translateY(0);
+    }
+}
+
+
 .landingHeroDiv{
     width: 100%;
     aspect-ratio: 1920 / 1021;
@@ -13,6 +24,7 @@
 .landingHeroDivArch{
    object-fit: cover    ;
    z-index: 2;
+   animation: construct 0.5s ease-out;
 }
 
 .landingHeroDiv img{

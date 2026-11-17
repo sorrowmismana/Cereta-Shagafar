@@ -2,12 +2,19 @@ import Pafumis from "../assets/factions/Pafumis.PNG"
 import Manue from "../assets/characters/manue.PNG"
 import Lohtikhar from "../assets/items/Shagafarian-Lohtikhar.png"
 import Lankhar from "../assets/items/Lankhar.jpg"
+import bambooJerky from "../assets/items/bamboo_jerky.jpg"
 
 export const articles = [
     { 
         id: "manue", 
         name: "Manue", 
         image: Manue,
+        category: "Religion",
+    },
+    { 
+        id: "bambooJerky", 
+        name: "Bamboo Jerky", 
+        image: bambooJerky,
         category: "Religion",
     },
     { 
